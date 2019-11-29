@@ -10,12 +10,12 @@ open.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-show");
   nameFamily.focus();
-
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
 });
 
 form.addEventListener("submit", function (evt) {
@@ -32,6 +32,7 @@ window.addEventListener("keydown", function (evt) {
     if (popup.classList.contains("modal-show")) {
       evt.preventDefault();
       popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
     }
   }
 });
